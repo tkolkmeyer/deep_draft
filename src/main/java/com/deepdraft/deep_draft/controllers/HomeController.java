@@ -13,10 +13,4 @@ public class HomeController {
         return "home";
     }
 
-
-    @RequestMapping("sestina/add")
-    public String addSestina(Model model) {
-        model.addAttribute("title", "Add Sestina");
-        return "sestina/add";
-    }
 }
