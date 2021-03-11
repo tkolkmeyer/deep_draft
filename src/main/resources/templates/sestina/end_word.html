@@ -4,7 +4,7 @@
 
 <head th:replace="fragments :: head"></head>
 
-<body>
+<body class="container">
 <div th:replace="fragments :: page-header"></div>
 
 
@@ -12,36 +12,35 @@
 </br>
 </br>
 </br>
-    <form action="post">
+    <form method="post">
+        <div class="form-group">
         <label>end word 1
-            <input type="text" name="endword1" id="endword1">
+            <input type="text" name="endword1" th:value="${endword1}">
         </label>
     </br>
         <label>end word 2
-            <input type="text" name="endword2" id="endword2">
+            <input type="text" name="endword2" th:value="${endword2}">
         </label>
         </br>
         <label>end word 3
-            <input type="text" name="endword3" id="endword3">
+            <input type="text" name="endword3" th:value="${endword3}">
         </label>
         </br>
         <label>end word 4
-            <input type="text" name="endword4" id="endword4">
+            <input type="text" name="endword4" th:value="${endword4}">
         </label>
         </br>
         <label>end word 5
-            <input type="text" name="endword5" id="endword5">
+            <input type="text" name="endword5" th:value="${endword5}">
         </label>
         </br>
         <label>end word 6
-            <input type="text" name="endword6" id="endword6">
+            <input type="text" name="endword6" th:value="${endword6}">
         </label>
+        </div>
 
-    </form>
-
-    <div class="form-group">
         <input type="submit" value="Submit" class="btn btn-success">
-    </div>
 
-</body>
+        </form>
+    </body>
 </html>
