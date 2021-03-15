@@ -7,7 +7,6 @@
 <body class="container">
 <div th:replace="fragments :: page-header"></div>
 
-
 </br>
 </br>
 </br>
@@ -48,8 +47,36 @@
 <div>
     <body>
         <p th:text = "${sestinaExplanation}">Sestina Explanation</p>
-        <img th:src="@{/images/Sestina_system_alt.png}">
+        <img th:src="@{/images/sestina_diagram.png}">
 
     </body>
+
+    <form method="post">
+        <div class="form-group">
+            <input type="text" name="S1L1" th:value="${S1L1}">
+            <label th:text="${EW1}"></label>
+        </br>
+            <input type="text" name="S1L2" th:value="${S1L2}">
+            <label th:text="${EW2}"></label>
+        </br>
+            <input type="text" name="S1L3" th:value="${S1L3}">
+            <label th:text="${EW3}"></label>
+        </br>
+            <input type="text" name="S1L4" th:value="${S1L4}">
+            <label th:text="${EW4}"></label>
+        </br>
+            <input type="text" name="S1L5" th:value="${S1L5}">
+            <label th:text="${EW5}"></label>
+        </br>
+            <input type="text" name="S1L6" th:value="${S1L6}">
+            <label th:text="${EW6}"></label>
+        </br>
+
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-success">
+
+    </form>
+
 </div>
 </html>
