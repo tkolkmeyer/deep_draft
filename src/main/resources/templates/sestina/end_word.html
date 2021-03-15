@@ -47,12 +47,13 @@
 <div>
     <body>
         <p th:text = "${sestinaExplanation}">Sestina Explanation</p>
-        <img th:src="@{/images/sestina_diagram.png}">
+        <img th:src="@{/images/diagram_sestina.png}">
 
     </body>
 
     <form method="post">
         <div class="form-group">
+            <h1>Stanza 1</h1>
             <input type="text" name="S1L1" th:value="${S1L1}">
             <label th:text="${EW1}"></label>
         </br>
@@ -70,6 +71,25 @@
         </br>
             <input type="text" name="S1L6" th:value="${S1L6}">
             <label th:text="${EW6}"></label>
+        </br>
+            <h1>Stanza 2</h1>
+            <input type="text" name="S2L1" th:value="${S2L1}">
+            <label th:text="${EW6}"></label>
+        </br>
+            <input type="text" name="S2L2" th:value="${S2L2}">
+            <label th:text="${EW1}"></label>
+        </br>
+            <input type="text" name="S2L3" th:value="${S2L3}">
+            <label th:text="${EW5}"></label>
+        </br>
+            <input type="text" name="S2L4" th:value="${S2L4}">
+            <label th:text="${EW2}"></label>
+        </br>
+            <input type="text" name="S2L5" th:value="${S2L5}">
+            <label th:text="${EW4}"></label>
+        </br>
+            <input type="text" name="S2L6" th:value="${S2L6}">
+            <label th:text="${EW3}"></label>
         </br>
 
         </div>
