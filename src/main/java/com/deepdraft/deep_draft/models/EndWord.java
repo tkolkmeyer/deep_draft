@@ -1,71 +1,72 @@
 package com.deepdraft.deep_draft.models;
 
-
 public class EndWord {
 
-    private String EW1;
-    private String EW2;
-    private String EW3;
-    private String EW4;
-    private String EW5;
-    private String EW6;
-
-    public EndWord(String EW1, String EW2, String EW3, String EW4, String EW5, String EW6) {
-        this.EW1 = EW1;
-        this.EW2 = EW2;
-        this.EW3 = EW3;
-        this.EW4 = EW4;
-        this.EW5 = EW5;
-        this.EW6 = EW6;
-    }
+    private String one;
+    private String two;
+    private String three;
+    private String four;
+    private String five;
+    private String six;
 
     public EndWord() {}
 
-    public String getEW1() {
-        return EW1;
+    public EndWord(String one, String two, String three, String four, String five, String six) {
+        this.one = one;
+        this.two = two;
+        this.three = three;
+        this.four = four;
+        this.five = five;
+        this.six = six;
     }
 
-    public void setEW1(String EW1) {
-        this.EW1 = EW1;
+    public String getOne() {
+        return one;
     }
 
-    public String getEW2() {
-        return EW2;
+    public void setOne(String one) {
+        this.one = one;
     }
 
-    public void setEW2(String EW2) {
-        this.EW2 = EW2;
+    public String getTwo() {
+        return two;
     }
 
-    public String getEW3() {
-        return EW3;
+    public void setTwo(String two) {
+        this.two = two;
     }
 
-    public void setEW3(String EW3) {
-        this.EW3 = EW3;
+    public String getThree() {
+        return three;
     }
 
-    public String getEW4() {
-        return EW4;
+    public void setThree(String three) {
+        this.three = three;
     }
 
-    public void setEW4(String EW4) {
-        this.EW4 = EW4;
+    public String getFour() {
+        return four;
     }
 
-    public String getEW5() {
-        return EW5;
+    public void setFour(String four) {
+        this.four = four;
     }
 
-    public void setEW5(String EW5) {
-        this.EW5 = EW5;
+    public String getFive() {
+        return five;
     }
 
-    public String getEW6() {
-        return EW6;
+    public void setFive(String five) {
+        this.five = five;
     }
 
-    public void setEW6(String EW6) {
-        this.EW6 = EW6;
+    public String getSix() {
+        return six;
+    }
+
+    public void setSix(String six) {
+        this.six = six;
     }
 }
+
+

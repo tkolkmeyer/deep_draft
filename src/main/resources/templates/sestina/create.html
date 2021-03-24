@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<meta charset="UTF-8"/>
+
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+<div th:replace="fragments :: page-header"></div>
+
+</br>
+</br>
+</br>
+</br>
+<form method="post">
+    <div class="form-group">
+        <label>end word 1
+            <input type="text" name="endword1" th:value="${endword1}">
+        </label>
+        </br>
+        <label>end word 2
+            <input type="text" name="endword2" th:value="${endword2}">
+        </label>
+        </br>
+        <label>end word 3
+            <input type="text" name="endword3" th:value="${endword3}">
+        </label>
+        </br>
+        <label>end word 4
+            <input type="text" name="endword4" th:value="${endword4}">
+        </label>
+        </br>
+        <label>end word 5
+            <input type="text" name="endword5" th:value="${endword5}">
+        </label>
+        </br>
+        <label>end word 6
+            <input type="text" name="endword6" th:value="${endword6}">
+        </label>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-success">
+
+</form>
+</body>
+
+<div>
+    <body>
+    <p th:text="${sestinaExplanation}">Sestina Explanation</p>
+    <img th:src="@{/images/diagram_sestina.png}">
+    </body>
+</div>
+
+
+
+<form method="post">
+    <div class="form-group">
+        <h1>Stanza 1</h1>
+        <input type="text" name="S1L1" th:value="${S1L1}">
+        <label th:text="${EW1}"></label>
+        </br>
+        <input type="text" name="S1L2" th:value="${S1L2}">
+        <label th:text="${EW2}"></label>
+        </br>
+        <input type="text" name="S1L3" th:value="${S1L3}">
+        <label th:text="${EW3}"></label>
+        </br>
+        <input type="text" name="S1L4" th:value="${S1L4}">
+        <label th:text="${EW4}"></label>
+        </br>
+        <input type="text" name="S1L5" th:value="${S1L5}">
+        <label th:text="${EW5}"></label>
+        </br>
+        <input type="text" name="S1L6" th:value="${S1L6}">
+        <label th:text="${EW6}"></label>
+        </br>
+
+        <h1>Stanza 2</h1>
+        <input type="text" name="S2L1" th:value="${S2L1}">
+        <label th:text="${EW6}"></label>
+        </br>
+        <input type="text" name="S2L2" th:value="${S2L2}">
+        <label th:text="${EW1}"></label>
+        </br>
+        <input type="text" name="S2L3" th:value="${S2L3}">
+        <label th:text="${EW5}"></label>
+        </br>
+        <input type="text" name="S2L4" th:value="${S2L4}">
+        <label th:text="${EW2}"></label>
+        </br>
+        <input type="text" name="S2L5" th:value="${S2L5}">
+        <label th:text="${EW4}"></label>
+        </br>
+        <input type="text" name="S2L6" th:value="${S2L6}">
+        <label th:text="${EW3}"></label>
+        </br>
+
+        <h1>Stanza 3</h1>
+        <input type="text" name="S3L1" th:value="${S3L1}">
+        <label th:text="${EW3}"></label>
+        </br>
+        <input type="text" name="S3L2" th:value="${S3L2}">
+        <label th:text="${EW6}"></label>
+        </br>
+        <input type="text" name="S3L3" th:value="${S3L3}">
+        <label th:text="${EW4}"></label>
+        </br>
+        <input type="text" name="S3L4" th:value="${S3L4}">
+        <label th:text="${EW1}"></label>
+        </br>
+        <input type="text" name="S3L5" th:value="${S3L5}">
+        <label th:text="${EW2}"></label>
+        </br>
+        <input type="text" name="S3L6" th:value="${S3L6}">
+        <label th:text="${EW5}"></label>
+        </br>
+
+        <h1>Stanza 4</h1>
+        <input type="text" name="S4L1" th:value="${S4L1}">
+        <label th:text="${EW5}"></label>
+        </br>
+        <input type="text" name="S4L2" th:value="${S4L2}">
+        <label th:text="${EW3}"></label>
+        </br>
+        <input type="text" name="S4L3" th:value="${S4L3}">
+        <label th:text="${EW2}"></label>
+        </br>
+        <input type="text" name="S4L4" th:value="${S4L4}">
+        <label th:text="${EW6}"></label>
+        </br>
+        <input type="text" name="S4L5" th:value="${S4L5}">
+        <label th:text="${EW1}"></label>
+        </br>
+        <input type="text" name="S4L6" th:value="${S4L6}">
+        <label th:text="${EW4}"></label>
+        </br>
+
+        <h1>Stanza 5</h1>
+        <input type="text" name="S5L1" th:value="${S5L1}">
+        <label th:text="${EW4}"></label>
+        </br>
+        <input type="text" name="S5L2" th:value="${S5L2}">
+        <label th:text="${EW5}"></label>
+        </br>
+        <input type="text" name="S5L3" th:value="${S5L3}">
+        <label th:text="${EW1}"></label>
+        </br>
+        <input type="text" name="S5L4" th:value="${S5L4}">
+        <label th:text="${EW3}"></label>
+        </br>
+        <input type="text" name="S5L5" th:value="${S5L5}">
+        <label th:text="${EW6}"></label>
+        </br>
+        <input type="text" name="S5L6" th:value="${S5L6}">
+        <label th:text="${EW2}"></label>
+        </br>
+
+        <h1>Stanza 6</h1>
+        <input type="text" name="S6L1" th:value="${S6L1}">
+        <label th:text="${EW2}"></label>
+        </br>
+        <input type="text" name="S6L2" th:value="${S6L2}">
+        <label th:text="${EW4}"></label>
+        </br>
+        <input type="text" name="S6L3" th:value="${S6L3}">
+        <label th:text="${EW6}"></label>
+        </br>
+        <input type="text" name="S6L4" th:value="${S6L4}">
+        <label th:text="${EW5}"></label>
+        </br>
+        <input type="text" name="S6L5" th:value="${S6L5}">
+        <label th:text="${EW3}"></label>
+        </br>
+        <input type="text" name="S6L6" th:value="${S6L6}">
+        <label th:text="${EW1}"></label>
+        </br>
+
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-success">
+
+
+
+</form>
+
+<!--<p th:text ="${S1L1}"></p>-->
+
+</html>
