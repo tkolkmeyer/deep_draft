@@ -16,22 +16,24 @@
 <!--<form:form method="get" commandName="command1" action="sestina/create">-->
 <!--    <input type="text">-->
 <!--    &lt;!&ndash; field of form 1 &ndash;&gt;-->
-<!--    <form:input path="END1"/>-->
-<!--    <input type="submit" value="Save End Words"/>-->
+
+<!--    <form:input path="FormOne.END1"/>-->
+
 
 <!--    <form:form method="get" commandName="command2" action="sestina/style">-->
-<!--        <input type="text">-->
-<!--        &lt;!&ndash; field of form 2 &ndash;&gt;-->
-<!--        <form:input path="L1" />-->
+<!--        <input type="submit" value="Save End Words"/>-->
 
 <!--        <input type="text">-->
-<!--        <form:input path="L2" />-->
+<!--        <label th:text="${FormOne.getEND1()}"></label>-->
+<!--        &lt;!&ndash; field of form 2 &ndash;&gt;-->
+<!--        <form:input path="FormTwo.L1" />-->
+
+<!--        <input type="submit" value="Submit Poem"/>-->
 
 <!--    </form:form>-->
-<!--    <input type="submit" value="Submit Poem"/>-->
+
 <!--</form:form>-->
 
-<!--<p th:text="${END1}"></p>-->
 
 
 
@@ -67,135 +69,196 @@
 
 </form>
 
-<form method="post">
-    <div class="form-group">
-        <h1>Stanza 1</h1>
-        <input type="text" name="S1L1" th:value="${S1L1}">
-        <label th:text="${END1}"></label>
-        </br>
-        <input type="text" name="S1L2" th:value="${S1L2}">
-        <label th:text="${END2}"></label>
-        </br>
-        <input type="text" name="S1L3" th:value="${S1L3}">
-        <label th:text="${END3}"></label>
-        </br>
-        <input type="text" name="S1L4" th:value="${S1L4}">
-        <label th:text="${END4}"></label>
-        </br>
-        <input type="text" name="S1L5" th:value="${S1L5}">
-        <label th:text="${END5}"></label>
-        </br>
-        <input type="text" name="S1L6" th:value="${S1L6}">
-        <label th:text="${END6}"></label>
-        </br>
+<!--<form method="post">-->
+<!--    <div class="form-group">-->
+<!--        <h1>Stanza 1</h1>-->
+<!--        <input type="text" name="S1L1" th:value="${S1L1}">-->
+<!--        <label th:text="${END1}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S1L2" th:value="${S1L2}">-->
+<!--        <label th:text="${END2}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S1L3" th:value="${S1L3}">-->
+<!--        <label th:text="${END3}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S1L4" th:value="${S1L4}">-->
+<!--        <label th:text="${END4}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S1L5" th:value="${S1L5}">-->
+<!--        <label th:text="${END5}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S1L6" th:value="${S1L6}">-->
+<!--        <label th:text="${END6}"></label>-->
+<!--        </br>-->
 
-        <h1>Stanza 2</h1>
-        <input type="text" name="S2L1" th:value="${S2L1}">
-        <label th:text="${END6}"></label>
-        </br>
-        <input type="text" name="S2L2" th:value="${S2L2}">
-        <label th:text="${END1}"></label>
-        </br>
-        <input type="text" name="S2L3" th:value="${S2L3}">
-        <label th:text="${END5}"></label>
-        </br>
-        <input type="text" name="S2L4" th:value="${S2L4}">
-        <label th:text="${END2}"></label>
-        </br>
-        <input type="text" name="S2L5" th:value="${S2L5}">
-        <label th:text="${END4}"></label>
-        </br>
-        <input type="text" name="S2L6" th:value="${S2L6}">
-        <label th:text="${END3}"></label>
-        </br>
+<!--        <h1>Stanza 2</h1>-->
+<!--        <input type="text" name="S2L1" th:value="${S2L1}">-->
+<!--        <label th:text="${END6}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S2L2" th:value="${S2L2}">-->
+<!--        <label th:text="${END1}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S2L3" th:value="${S2L3}">-->
+<!--        <label th:text="${END5}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S2L4" th:value="${S2L4}">-->
+<!--        <label th:text="${END2}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S2L5" th:value="${S2L5}">-->
+<!--        <label th:text="${END4}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S2L6" th:value="${S2L6}">-->
+<!--        <label th:text="${END3}"></label>-->
+<!--        </br>-->
 
-        <h1>Stanza 3</h1>
-        <input type="text" name="S3L1" th:value="${S3L1}">
-        <label th:text="${END3}"></label>
-        </br>
-        <input type="text" name="S3L2" th:value="${S3L2}">
-        <label th:text="${END6}"></label>
-        </br>
-        <input type="text" name="S3L3" th:value="${S3L3}">
-        <label th:text="${END4}"></label>
-        </br>
-        <input type="text" name="S3L4" th:value="${S3L4}">
-        <label th:text="${END1}"></label>
-        </br>
-        <input type="text" name="S3L5" th:value="${S3L5}">
-        <label th:text="${END2}"></label>
-        </br>
-        <input type="text" name="S3L6" th:value="${S3L6}">
-        <label th:text="${END5}"></label>
-        </br>
+<!--        <h1>Stanza 3</h1>-->
+<!--        <input type="text" name="S3L1" th:value="${S3L1}">-->
+<!--        <label th:text="${END3}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S3L2" th:value="${S3L2}">-->
+<!--        <label th:text="${END6}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S3L3" th:value="${S3L3}">-->
+<!--        <label th:text="${END4}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S3L4" th:value="${S3L4}">-->
+<!--        <label th:text="${END1}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S3L5" th:value="${S3L5}">-->
+<!--        <label th:text="${END2}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S3L6" th:value="${S3L6}">-->
+<!--        <label th:text="${END5}"></label>-->
+<!--        </br>-->
 
-        <h1>Stanza 4</h1>
-        <input type="text" name="S4L1" th:value="${S4L1}">
-        <label th:text="${END5}"></label>
-        </br>
-        <input type="text" name="S4L2" th:value="${S4L2}">
-        <label th:text="${END3}"></label>
-        </br>
-        <input type="text" name="S4L3" th:value="${S4L3}">
-        <label th:text="${END2}"></label>
-        </br>
-        <input type="text" name="S4L4" th:value="${S4L4}">
-        <label th:text="${END6}"></label>
-        </br>
-        <input type="text" name="S4L5" th:value="${S4L5}">
-        <label th:text="${END1}"></label>
-        </br>
-        <input type="text" name="S4L6" th:value="${S4L6}">
-        <label th:text="${END4}"></label>
-        </br>
+<!--        <h1>Stanza 4</h1>-->
+<!--        <input type="text" name="S4L1" th:value="${S4L1}">-->
+<!--        <label th:text="${END5}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S4L2" th:value="${S4L2}">-->
+<!--        <label th:text="${END3}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S4L3" th:value="${S4L3}">-->
+<!--        <label th:text="${END2}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S4L4" th:value="${S4L4}">-->
+<!--        <label th:text="${END6}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S4L5" th:value="${S4L5}">-->
+<!--        <label th:text="${END1}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S4L6" th:value="${S4L6}">-->
+<!--        <label th:text="${END4}"></label>-->
+<!--        </br>-->
 
-        <h1>Stanza 5</h1>
-        <input type="text" name="S5L1" th:value="${S5L1}">
-        <label th:text="${END4}"></label>
-        </br>
-        <input type="text" name="S5L2" th:value="${S5L2}">
-        <label th:text="${END5}"></label>
-        </br>
-        <input type="text" name="S5L3" th:value="${S5L3}">
-        <label th:text="${END1}"></label>
-        </br>
-        <input type="text" name="S5L4" th:value="${S5L4}">
-        <label th:text="${END3}"></label>
-        </br>
-        <input type="text" name="S5L5" th:value="${S5L5}">
-        <label th:text="${END6}"></label>
-        </br>
-        <input type="text" name="S5L6" th:value="${S5L6}">
-        <label th:text="${END2}"></label>
-        </br>
+<!--        <h1>Stanza 5</h1>-->
+<!--        <input type="text" name="S5L1" th:value="${S5L1}">-->
+<!--        <label th:text="${END4}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S5L2" th:value="${S5L2}">-->
+<!--        <label th:text="${END5}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S5L3" th:value="${S5L3}">-->
+<!--        <label th:text="${END1}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S5L4" th:value="${S5L4}">-->
+<!--        <label th:text="${END3}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S5L5" th:value="${S5L5}">-->
+<!--        <label th:text="${END6}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S5L6" th:value="${S5L6}">-->
+<!--        <label th:text="${END2}"></label>-->
+<!--        </br>-->
 
-        <h1>Stanza 6</h1>
-        <input type="text" name="S6L1" th:value="${S6L1}">
-        <label th:text="${END2}"></label>
-        </br>
-        <input type="text" name="S6L2" th:value="${S6L2}">
-        <label th:text="${END4}"></label>
-        </br>
-        <input type="text" name="S6L3" th:value="${S6L3}">
-        <label th:text="${END6}"></label>
-        </br>
-        <input type="text" name="S6L4" th:value="${S6L4}">
-        <label th:text="${END5}"></label>
-        </br>
-        <input type="text" name="S6L5" th:value="${S6L5}">
-        <label th:text="${END3}"></label>
-        </br>
-        <input type="text" name="S6L6" th:value="${S6L6}">
-        <label th:text="${END1}"></label>
-        </br>
+<!--        <h1>Stanza 6</h1>-->
+<!--        <input type="text" name="S6L1" th:value="${S6L1}">-->
+<!--        <label th:text="${END2}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S6L2" th:value="${S6L2}">-->
+<!--        <label th:text="${END4}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S6L3" th:value="${S6L3}">-->
+<!--        <label th:text="${END6}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S6L4" th:value="${S6L4}">-->
+<!--        <label th:text="${END5}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S6L5" th:value="${S6L5}">-->
+<!--        <label th:text="${END3}"></label>-->
+<!--        </br>-->
+<!--        <input type="text" name="S6L6" th:value="${S6L6}">-->
+<!--        <label th:text="${END1}"></label>-->
+<!--        </br>-->
 
-    </div>
+<!--    </div>-->
 
-    <input type="submit" value="Submit" class="btn btn-success">
+<!--    <input type="submit" value="Submit" class="btn btn-success">-->
+<!--</form>-->
+<label th:text="${stanzaOne}"></label>
 
+<textarea id="sestina" name="sestina" type="text" th:value="${sestina}" rows="40" cols="100">
 
+stanza one
+<p th:text="${END1}"></p>
+<p th:text="${END2}"></p>
+<p th:text="${END3}"></p>
+<p th:text="${END4}"></p>
+<p th:text="${END5}"></p>
+<p th:text="${END6}"></p>
 
-</form>
+stanza two
+<p th:text="${END6}"></p>
+<p th:text="${END1}"></p>
+<p th:text="${END5}"></p>
+<p th:text="${END2}"></p>
+<p th:text="${END4}"></p>
+<p th:text="${END6}"></p>
+
+stanza three
+<p th:text="${END3}"></p>
+<p th:text="${END6}"></p>
+<p th:text="${END4}"></p>
+<p th:text="${END1}"></p>
+<p th:text="${END2}"></p>
+<p th:text="${END5}"></p>
+
+stanza four
+<p th:text="${END5}"></p>
+<p th:text="${END3}"></p>
+<p th:text="${END2}"></p>
+<p th:text="${END6}"></p>
+<p th:text="${END1}"></p>
+<p th:text="${END4}"></p>
+
+stanza five
+<p th:text="${END4}"></p>
+<p th:text="${END5}"></p>
+<p th:text="${END1}"></p>
+<p th:text="${END3}"></p>
+<p th:text="${END6}"></p>
+<p th:text="${END2}"></p>
+
+stanza six
+<p th:text="${END2}"></p>
+<p th:text="${END4}"></p>
+<p th:text="${END6}"></p>
+<p th:text="${END5}"></p>
+<p th:text="${END3}"></p>
+<p th:text="${END1}"></p>
+
+envoy
+(line one)
+<p th:text="${END2}"></p>, <p th:text="${END6}"></p>
+
+(line two)
+<p th:text="${END1}"></p>, <p th:text="${END4}"></p>
+
+(line three)
+<p th:text="${END5}"></p>, <p th:text="${END3}"></p>
+
+</textarea>
+
 </body>
 
 </html>

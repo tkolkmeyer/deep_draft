@@ -4,6 +4,7 @@ package com.deepdraft.deep_draft.controllers;
 import com.deepdraft.deep_draft.models.EndWord;
 import com.deepdraft.deep_draft.models.FormOne;
 import com.deepdraft.deep_draft.models.FormTwo;
+import com.deepdraft.deep_draft.models.Stanza;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,11 @@ public class SestinaController {
         model.addAttribute("END4", EW.getFour());
         model.addAttribute("END5", EW.getFive());
         model.addAttribute("END6", EW.getSix());
+
+        Stanza firstStanza = new Stanza();
+        firstStanza.setStanzaOne(endword1, endword2, endword3, endword4, endword5, endword6);
+
+        model.addAttribute("stanzaOne", firstStanza.getStanzaOne());
 
         return "sestina/create";
     }
@@ -97,8 +103,8 @@ public class SestinaController {
 //
 //        return "sestina/create";
 //    }
-//
-//
+
+
 //    @RequestMapping(value = "/style", method = RequestMethod.GET)
 //    public String method2(Model model, @ModelAttribute("command2") FormTwo form2) {
 //
