@@ -32,9 +32,17 @@ public class SestinaController {
         model.addAttribute("END6", EW.getSix());
 
         Stanza firstStanza = new Stanza();
+        Stanza secondStanza = new Stanza();
+        Stanza thirdStanza = new Stanza();
+        Stanza fourthStanza = new Stanza();
+        Stanza fifthStanza = new Stanza();
+        Stanza sixthStanza = new Stanza();
+
         firstStanza.setStanzaOne(endword1, endword2, endword3, endword4, endword5, endword6);
+        secondStanza.setStanzaTwo(endword1, endword2, endword3, endword4, endword5, endword6);
 
         model.addAttribute("stanzaOne", firstStanza.getStanzaOne());
+        model.addAttribute("stanzaTwo", secondStanza.getStanzaTwo());
 
         return "sestina/create";
     }

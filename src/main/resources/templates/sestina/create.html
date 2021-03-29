@@ -38,36 +38,7 @@
 
 
 
-<form method="post">
-    <div class="form-group">
-        <label>end word 1
-            <input type="text" name="endword1" th:value="${endword1}">
-        </label>
-        </br>
-        <label>end word 2
-            <input type="text" name="endword2" th:value="${endword2}">
-        </label>
-        </br>
-        <label>end word 3
-            <input type="text" name="endword3" th:value="${endword3}">
-        </label>
-        </br>
-        <label>end word 4
-            <input type="text" name="endword4" th:value="${endword4}">
-        </label>
-        </br>
-        <label>end word 5
-            <input type="text" name="endword5" th:value="${endword5}">
-        </label>
-        </br>
-        <label>end word 6
-            <input type="text" name="endword6" th:value="${endword6}">
-        </label>
-    </div>
 
-    <input type="submit" value="Submit" class="btn btn-success">
-
-</form>
 
 <!--<form method="post">-->
 <!--    <div class="form-group">-->
@@ -195,70 +166,132 @@
 
 <!--    <input type="submit" value="Submit" class="btn btn-success">-->
 <!--</form>-->
-<label th:text="${stanzaOne}"></label>
 
-<textarea id="sestina" name="sestina" type="text" th:value="${sestina}" rows="40" cols="100">
 
-stanza one
-<p th:text="${END1}"></p>
-<p th:text="${END2}"></p>
-<p th:text="${END3}"></p>
-<p th:text="${END4}"></p>
-<p th:text="${END5}"></p>
-<p th:text="${END6}"></p>
+<!--<textarea id="sestina" name="sestina" type="text" th:value="${sestina}" rows="40" cols="100">-->
 
-stanza two
-<p th:text="${END6}"></p>
-<p th:text="${END1}"></p>
-<p th:text="${END5}"></p>
-<p th:text="${END2}"></p>
-<p th:text="${END4}"></p>
-<p th:text="${END6}"></p>
+<!--</textarea>-->
 
-stanza three
-<p th:text="${END3}"></p>
-<p th:text="${END6}"></p>
-<p th:text="${END4}"></p>
-<p th:text="${END1}"></p>
-<p th:text="${END2}"></p>
-<p th:text="${END5}"></p>
+<!--<h3 th:each="endword: ${stanzaOne}">-->
+<!--    <p th:text="${endword}"></p>-->
+<!--</h3>-->
 
-stanza four
-<p th:text="${END5}"></p>
-<p th:text="${END3}"></p>
-<p th:text="${END2}"></p>
-<p th:text="${END6}"></p>
-<p th:text="${END1}"></p>
-<p th:text="${END4}"></p>
+<table>
+    <tr>
+        <th>
+            <form method="post">
+                <div class="form-group">
+                    <label>end word 1
+                        <input type="text" name="endword1" th:value="${endword1}">
+                    </label>
+                    </br>
+                    <label>end word 2
+                        <input type="text" name="endword2" th:value="${endword2}">
+                    </label>
+                    </br>
+                    <label>end word 3
+                        <input type="text" name="endword3" th:value="${endword3}">
+                    </label>
+                    </br>
+                    <label>end word 4
+                        <input type="text" name="endword4" th:value="${endword4}">
+                    </label>
+                    </br>
+                    <label>end word 5
+                        <input type="text" name="endword5" th:value="${endword5}">
+                    </label>
+                    </br>
+                    <label>end word 6
+                        <input type="text" name="endword6" th:value="${endword6}">
+                    </label>
+                </div>
 
-stanza five
-<p th:text="${END4}"></p>
-<p th:text="${END5}"></p>
-<p th:text="${END1}"></p>
-<p th:text="${END3}"></p>
-<p th:text="${END6}"></p>
-<p th:text="${END2}"></p>
+                <input type="submit" value="Submit" class="btn btn-success">
 
-stanza six
-<p th:text="${END2}"></p>
-<p th:text="${END4}"></p>
-<p th:text="${END6}"></p>
-<p th:text="${END5}"></p>
-<p th:text="${END3}"></p>
-<p th:text="${END1}"></p>
+            </form>
+        </th>
+        <th>
 
-envoy
-(line one)
-<p th:text="${END2}"></p>, <p th:text="${END6}"></p>
+            big ole sestina explanation
 
-(line two)
-<p th:text="${END1}"></p>, <p th:text="${END4}"></p>
-
-(line three)
-<p th:text="${END5}"></p>, <p th:text="${END3}"></p>
-
-</textarea>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <textarea id="sestina" name="sestina" type="text" th:value="${sestina}" rows="40" cols="100">
+            </textarea>
+        </td>
+        <td>
+            <h3>stanza one</h3>
+                <p th:each="endword: ${stanzaOne}">
+                    <label th:text="${endword}"></label>
+            </p>
+            <h3>stanza two</h3>
+            <p th:each="endword: ${stanzaTwo}">
+                <label th:text="${endword}"></label>
+            </p>
+        </td>
+    </tr>
+</table>
 
 </body>
+
+<!--stanza one-->
+<!--<p th:text="${END1}"></p>-->
+<!--<p th:text="${END2}"></p>-->
+<!--<p th:text="${END3}"></p>-->
+<!--<p th:text="${END4}"></p>-->
+<!--<p th:text="${END5}"></p>-->
+<!--<p th:text="${END6}"></p>-->
+
+<!--stanza two-->
+<!--<p th:text="${END6}"></p>-->
+<!--<p th:text="${END1}"></p>-->
+<!--<p th:text="${END5}"></p>-->
+<!--<p th:text="${END2}"></p>-->
+<!--<p th:text="${END4}"></p>-->
+<!--<p th:text="${END3}"></p>-->
+
+<!--stanza three-->
+<!--<p th:text="${END3}"></p>-->
+<!--<p th:text="${END6}"></p>-->
+<!--<p th:text="${END4}"></p>-->
+<!--<p th:text="${END1}"></p>-->
+<!--<p th:text="${END2}"></p>-->
+<!--<p th:text="${END5}"></p>-->
+
+<!--stanza four-->
+<!--<p th:text="${END5}"></p>-->
+<!--<p th:text="${END3}"></p>-->
+<!--<p th:text="${END2}"></p>-->
+<!--<p th:text="${END6}"></p>-->
+<!--<p th:text="${END1}"></p>-->
+<!--<p th:text="${END4}"></p>-->
+
+<!--stanza five-->
+<!--<p th:text="${END4}"></p>-->
+<!--<p th:text="${END5}"></p>-->
+<!--<p th:text="${END1}"></p>-->
+<!--<p th:text="${END3}"></p>-->
+<!--<p th:text="${END6}"></p>-->
+<!--<p th:text="${END2}"></p>-->
+
+<!--stanza six-->
+<!--<p th:text="${END2}"></p>-->
+<!--<p th:text="${END4}"></p>-->
+<!--<p th:text="${END6}"></p>-->
+<!--<p th:text="${END5}"></p>-->
+<!--<p th:text="${END3}"></p>-->
+<!--<p th:text="${END1}"></p>-->
+
+<!--envoy-->
+<!--(line one)-->
+<!--<p th:text="${END2}"></p>, <p th:text="${END6}"></p>-->
+
+<!--(line two)-->
+<!--<p th:text="${END1}"></p>, <p th:text="${END4}"></p>-->
+
+<!--(line three)-->
+<!--<p th:text="${END5}"></p>, <p th:text="${END3}"></p>-->
 
 </html>
