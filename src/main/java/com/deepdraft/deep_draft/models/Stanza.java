@@ -3,7 +3,7 @@ package com.deepdraft.deep_draft.models;
 
 import java.util.ArrayList;
 
-public class Stanza extends EndWord {
+public class Stanza {
 
     private ArrayList<String> stanzaOne;
     private ArrayList<String> stanzaTwo;
@@ -12,24 +12,14 @@ public class Stanza extends EndWord {
     private ArrayList<String> stanzaFive;
     private ArrayList<String> stanzaSix;
 
-    private ArrayList<String> envoyLineOne;
-    private ArrayList<String> envoyLineTwo;
-    private ArrayList<String> envoyLineThree;
-
+    private ArrayList<String> envoiLineOne;
+    private ArrayList<String> envoiLineTwo;
+    private ArrayList<String> envoiLineThree;
 
     public Stanza() {}
 
-    public Stanza(String one, String two, String three, String four, String five, String six, ArrayList<String> stanzaOne, ArrayList<String> stanzaTwo, ArrayList<String> stanzaThree, ArrayList<String> stanzaFour, ArrayList<String> stanzaFive, ArrayList<String> stanzaSix, ArrayList<String> envoyLineOne, ArrayList<String> envoyLineTwo, ArrayList<String> envoyLineThree) {
-        super(one, two, three, four, five, six);
-        this.stanzaOne = stanzaOne;
-        this.stanzaTwo = stanzaTwo;
-        this.stanzaThree = stanzaThree;
-        this.stanzaFour = stanzaFour;
-        this.stanzaFive = stanzaFive;
-        this.stanzaSix = stanzaSix;
-        this.envoyLineOne = envoyLineOne;
-        this.envoyLineTwo = envoyLineTwo;
-        this.envoyLineThree = envoyLineThree;
+    public ArrayList<String> getStanzaOne() {
+        return stanzaOne;
     }
 
     public void setStanzaOne(String one, String two, String three, String four, String five, String six) {
@@ -41,10 +31,6 @@ public class Stanza extends EndWord {
         stanzaOne.add(4, five);
         stanzaOne.add(5, six);
         this.stanzaOne = stanzaOne;
-    }
-
-    public ArrayList<String> getStanzaOne() {
-        return stanzaOne;
     }
 
     public ArrayList<String> getStanzaTwo() {
@@ -122,27 +108,30 @@ public class Stanza extends EndWord {
         this.stanzaSix = stanzaSix;
     }
 
-    public ArrayList<String> getEnvoyLineOne() {
-        return envoyLineOne;
+    public ArrayList<String> getEnvoiLineOne() {
+        return envoiLineOne;
     }
 
-    public void setEnvoyLineOne(ArrayList<String> envoyLineOne) {
-        this.envoyLineOne = envoyLineOne;
+    public void setEnvoiLineOne(String one, String six) {
+        ArrayList<String> envoyLineOne = new ArrayList<>();
+        envoyLineOne.add(one);
+        envoyLineOne.add(six);
+        this.envoiLineOne = envoyLineOne;
     }
 
-    public ArrayList<String> getEnvoyLineTwo() {
-        return envoyLineTwo;
+    public ArrayList<String> getEnvoiLineTwo() {
+        return envoiLineTwo;
     }
 
-    public void setEnvoyLineTwo(ArrayList<String> envoyLineTwo) {
-        this.envoyLineTwo = envoyLineTwo;
+    public void setEnvoiLineTwo(ArrayList<String> envoiLineTwo) {
+        this.envoiLineTwo = envoiLineTwo;
     }
 
-    public ArrayList<String> getEnvoyLineThree() {
-        return envoyLineThree;
+    public ArrayList<String> getEnvoiLineThree() {
+        return envoiLineThree;
     }
 
-    public void setEnvoyLineThree(ArrayList<String> envoyLineThree) {
-        this.envoyLineThree = envoyLineThree;
+    public void setEnvoiLineThree(ArrayList<String> envoiLineThree) {
+        this.envoiLineThree = envoiLineThree;
     }
 }
