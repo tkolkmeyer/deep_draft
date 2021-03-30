@@ -40,7 +40,7 @@ public class SestinaController {
         model.addAttribute("stanzaFive", fifthStanza.getStanzaFive());
         model.addAttribute("stanzaSix", sixthStanza.getStanzaSix());
 
-        //passing endwords to view as separate variables for the envoi
+        //passing endwords to view as separate variables for the envoi guide
 
         model.addAttribute("END1", endword1);
         model.addAttribute("END2", endword2);
