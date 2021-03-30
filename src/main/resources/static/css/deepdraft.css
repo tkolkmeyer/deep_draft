@@ -7,7 +7,7 @@ td, th {
 }
 
 th {
-    text-align: center;
+    text-align: left;
 }
 
 td {
@@ -59,4 +59,5 @@ div.job-listing {
     border: 1px solid #e4e4e4;
     width: 80%;
     background-color: #e4e4e4;
+
 }
