@@ -66,7 +66,14 @@ public class Stanza extends EndWord {
         return stanzaThree;
     }
 
-    public void setStanzaThree(ArrayList<String> stanzaThree) {
+    public void setStanzaThree(String one, String two, String three, String four, String five, String six) {
+        ArrayList<String> stanzaThree = new ArrayList<>();
+        stanzaThree.add(0, three);
+        stanzaThree.add(1, six);
+        stanzaThree.add(2, four);
+        stanzaThree.add(3, one);
+        stanzaThree.add(4, two);
+        stanzaThree.add(5, five);
         this.stanzaThree = stanzaThree;
     }
 
