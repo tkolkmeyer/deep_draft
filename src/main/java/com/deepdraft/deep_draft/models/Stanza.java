@@ -81,7 +81,14 @@ public class Stanza extends EndWord {
         return stanzaFour;
     }
 
-    public void setStanzaFour(ArrayList<String> stanzaFour) {
+    public void setStanzaFour(String one, String two, String three, String four, String five, String six) {
+        ArrayList<String> stanzaFour = new ArrayList<>();
+        stanzaFour.add(0, five);
+        stanzaFour.add(1, three);
+        stanzaFour.add(2, two);
+        stanzaFour.add(3, six);
+        stanzaFour.add(4, one);
+        stanzaFour.add(5, four);
         this.stanzaFour = stanzaFour;
     }
 
@@ -89,7 +96,14 @@ public class Stanza extends EndWord {
         return stanzaFive;
     }
 
-    public void setStanzaFive(ArrayList<String> stanzaFive) {
+    public void setStanzaFive(String one, String two, String three, String four, String five, String six) {
+        ArrayList<String> stanzaFive = new ArrayList<>();
+        stanzaFive.add(0, four);
+        stanzaFive.add(1, five);
+        stanzaFive.add(2, one);
+        stanzaFive.add(3, three);
+        stanzaFive.add(4, six);
+        stanzaFive.add(5, two);
         this.stanzaFive = stanzaFive;
     }
 

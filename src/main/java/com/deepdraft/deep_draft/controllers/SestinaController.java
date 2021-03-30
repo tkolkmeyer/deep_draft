@@ -41,10 +41,14 @@ public class SestinaController {
         firstStanza.setStanzaOne(endword1, endword2, endword3, endword4, endword5, endword6);
         secondStanza.setStanzaTwo(endword1, endword2, endword3, endword4, endword5, endword6);
         thirdStanza.setStanzaThree(endword1, endword2, endword3, endword4, endword5, endword6);
+        fourthStanza.setStanzaFour(endword1, endword2, endword3, endword4, endword5, endword6);
+        fifthStanza.setStanzaFive(endword1, endword2, endword3, endword4, endword5, endword6);
 
         model.addAttribute("stanzaOne", firstStanza.getStanzaOne());
         model.addAttribute("stanzaTwo", secondStanza.getStanzaTwo());
         model.addAttribute("stanzaThree", thirdStanza.getStanzaThree());
+        model.addAttribute("stanzaFour", fourthStanza.getStanzaFour());
+        model.addAttribute("stanzaFive", fifthStanza.getStanzaFive());
 
         return "sestina/create";
     }
