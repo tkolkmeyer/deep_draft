@@ -42,7 +42,7 @@
                     </label>
                 </div>
 
-                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="submit" value="Submit End Words" class="btn btn-success">
 
             </form>
         </th>
@@ -53,11 +53,20 @@
         </th>
     </tr>
     <tr>
+
         <td>
-            <textarea id="sestina" name="sestina" type="text" th:value="${sestina}" rows="40" cols="100">
+            <form action="sestina/create" id="sestinaForm">
+
+            <textarea form="sestinaForm" th:value="${sestinaForm}" rows="40" cols="100">
             </textarea>
+
+<!--                <input type="submit" value="Submit Poem" class="btn btn-success">-->
+            </form>
         </td>
         <td>
+
+    <!--not sure why this conditional works, but it keeps the following stanza guide from showing up before the form is submitted-->
+    <div th:unless="${END1 == null}">
             <label>stanza one</label>
                 <div th:each="endword: ${stanzaOne}">
                     <p th:text="${endword}"></p>
@@ -90,25 +99,15 @@
         </br>
         <div>
             <label>envoi</label>
-
-            <p th:if="${END1 == null || END6 == null}"> put end words 1 and 6 in the first line of your envoi</p>
-            <p th:if="${END2 == null || END5 == null}"> put end words 2 and 5 in the second line</p>
-            <p th:if="${END3 == null || END4 == null}"> put end words 3 and 4 in the final line</p>
-
-
-<!--not sure why this conditional works, but it keeps the following envoi guide from showing up before the form is submitted-->
-        <div th:unless="${END1 == null}">
-                            <p th:text="'Use '+ ${END1} +' and '+ ${END6} +' in line one'"></p>
-                            <p th:text="'Use '+ ${END2} +' and '+ ${END5} +' in second line'"></p>
-                            <p th:text="'Use '+ ${END3} +' and '+ ${END4} +' in final line'"></p>
+                            <p th:text="'Use ('+ ${END1} +') and ('+ ${END6} +') in line one'"></p>
+                            <p th:text="'Use ('+ ${END2} +') and ('+ ${END5} +') in second line'"></p>
+                            <p th:text="'Use ('+ ${END3} +') and ('+ ${END4} +') in final line'"></p>
         </div>
 
         </div>
+
         </td>
     </tr>
 </table>
-
-<!--th:text="'Hi, ' + ${givenName} + ' ' + ${familyName}"-->
-
 </body>
 </html>

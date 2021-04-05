@@ -13,6 +13,8 @@ public class SestinaController {
 
     @GetMapping("create")
     public String displayEndWordForm(Model model) {
+
+
         return "sestina/create";
     }
 
