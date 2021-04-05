@@ -2,6 +2,11 @@
     margin-top: 72px;
 }
 
+textarea {
+  background: center center no-repeat;
+  border: 1px solid #888;
+}
+
 td, th {
     padding: 10px;
 }

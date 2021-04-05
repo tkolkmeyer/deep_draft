@@ -15,6 +15,15 @@
 <table>
     <tr>
         <th>
+            <h2>Sestina</h2>
+            <div>
+                <body>
+                <p th:text="${sestinaExplanation}">Sestina Explanation</p>
+                <img th:src="@{/images/diagram_sestina.png}">
+                </body>
+            </div>
+        </th>
+        <th>
             <form method="post">
                 <div class="form-group">
                     <label>end word 1
@@ -41,27 +50,18 @@
                         <input type="text" name="endword6" th:value="${endword6}">
                     </label>
                 </div>
-
                 <input type="submit" value="Submit End Words" class="btn btn-success">
-
             </form>
-        </th>
-        <th>
-
-            big ole sestina explanation
-
         </th>
     </tr>
     <tr>
-
         <td>
-            <form action="sestina/create" id="sestinaForm">
-
-            <textarea form="sestinaForm" th:value="${sestinaForm}" rows="40" cols="100">
+            <p><b>Your submitted end words will show up alongside the following text box as a guide to help you craft your poem. The sestina is made up of six stanzas with six lines followed by a three-line envoi.
+            <a href="/info" target="_blank">Let me see an example.</a></b>
+            </p>
+            <textarea placeholder="Learn the rules like a pro, so you can break them like an artist. -Picasso" rows="40" cols="100">
+            "Learn the rules like a pro, so you can break them like an artist." -Picasso
             </textarea>
-
-<!--                <input type="submit" value="Submit Poem" class="btn btn-success">-->
-            </form>
         </td>
         <td>
 
