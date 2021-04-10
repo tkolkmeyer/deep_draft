@@ -60,12 +60,11 @@
             <a href="/info" target="_blank">Let me see an example.</a></b>
             </p>
             <textarea placeholder="Learn the rules like a pro, so you can break them like an artist. -Picasso" rows="40" cols="100">
-            "Learn the rules like a pro, so you can break them like an artist." -Picasso
             </textarea>
         </td>
         <td>
 
-    <!--not sure why this conditional works, but it keeps the following stanza guide from showing up before the form is submitted-->
+    <!--this conditional keeps the following stanza guide from showing up before the form is submitted-->
     <div th:unless="${END1 == null}">
             <label>stanza one</label>
                 <div th:each="endword: ${stanzaOne}">
