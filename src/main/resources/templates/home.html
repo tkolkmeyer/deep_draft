@@ -4,23 +4,20 @@
 
 <head th:replace="fragments :: head"></head>
 
-<body>
 <div th:replace="fragments :: page-header"></div>
-</body>
+
 
 </br>
 </br>
 </br>
 
-<body>
+
 <img th:src="@{/images/deep_draft_logo.png}">
+<body>
+<!--      <h1>Welcome to Deep Draft!</h1>-->
 
-<h2 th:text="${welcome}">Welcome to Deep Draft!</h2>
-</br>
-<h3 th:text="${toolExplain}">This is a poetry formatting tool that lets you skip to the fun part. Traditional poetry formats sometimes call for complicated counting and organizing. This tool does that for you.</h3>
-<p th:text="${learnMore}">If you're interested in learning more about poetry traditions, that info is here, too!
-This is an open-sourced project that brings creativity to code. Kind of like the cyberflowers project I used to make this logo. There's a whole world of crafty code out there.</p>
+    </br>
+      <h2>Deep Draft encourages writers to get familiar with poetry traditions by making the process more accessible.</h2>
+            <p>This is an open-sourced project that brings creativity to code. Kind of like the <a href="https://blog.jpl.design/posts/s20/pixel-by-pixel/cyberflowers/" target="_blank">cyber flowers</a> project I used to make this logo. There's a whole world of crafty code out there!</p>
 </body>
-
-
 </html>
