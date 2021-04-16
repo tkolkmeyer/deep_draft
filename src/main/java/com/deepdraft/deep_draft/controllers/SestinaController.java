@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("sestina")
 public class SestinaController {
 
-
     @GetMapping("create")
     public String displayEndWordForm(Model model) {
 
@@ -51,5 +50,11 @@ public class SestinaController {
         model.addAttribute("END6", endword6);
 
         return "sestina/create";
+    }
+
+    @RequestMapping("create")
+    public String processSestinaStyling(Model model) {
+
+        return "style";
     }
 }
