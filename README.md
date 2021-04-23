@@ -6,7 +6,6 @@ When I was studying poetry in college, I wished for a tool that could help with 
 FEATURES:
 1. Sestina Formatter: Users will be able to create poems using tool that re-arranges user input according to the format.
 2. Info pages: Internal pages providing examples, explanations, tips and tricks for poetry crafting.
-3. Style Option: Users can change the font style of their resulting poem.
 
 TECHNOLOGIES:
 Java
