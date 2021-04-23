@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:form="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8"/>
+
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+<div th:replace="fragments :: page-header"></div>
+
+</br>
+</br>
+</br>
+</br>
+
+<table>
+    <tr>
+        <th>
+            <h2>Sestina</h2>
+            <div>
+                <body>
+                <p>The sestina poetry format is a French tradition that follows a pattern of word repetition. This structure encourages the poet to build a consistent theme or image, and the complicated tradition allows writers to present as obscure academics. But I’m looking to change that last part!</p>
+                <p>It’s okay if the following diagram is a little strange or confusing. Play around with the sestina tool at your own pace. You’ll get it!</p>
+                <img th:src="@{/images/diagram_sestina.png}">
+
+                </body>
+            </div>
+        </th>
+        <th>
+            <form method="post">
+                <div class="form-group">
+                    <label>end word 1
+                        <input type="text" name="endword1" th:value="${endword1}">
+                    </label>
+                    </br>
+                    <label>end word 2
+                        <input type="text" name="endword2" th:value="${endword2}">
+                    </label>
+                    </br>
+                    <label>end word 3
+                        <input type="text" name="endword3" th:value="${endword3}">
+                    </label>
+                    </br>
+                    <label>end word 4
+                        <input type="text" name="endword4" th:value="${endword4}">
+                    </label>
+                    </br>
+                    <label>end word 5
+                        <input type="text" name="endword5" th:value="${endword5}">
+                    </label>
+                    </br>
+                    <label>end word 6
+                        <input type="text" name="endword6" th:value="${endword6}">
+                    </label>
+                </div>
+                <input type="submit" value="Submit End Words" class="btn btn-success">
+            </form>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <p><b>Your submitted end words will show up alongside the following text box as a guide to help you craft your poem.
+            </br>
+                The sestina is made up of six stanzas with six lines followed by a three-line envoi.
+            <a href="/info" target="_blank">Let me see an example.</a></b></p>
+            </br>
+            <p><b>This text box doesn't save your work! Use "copy" or save it to a notepad if you re-submit end words.</b></p>
+            </p>
+            <form action="/style" id="sestina">
+
+
+                <textarea name="sestina" form="sestina" placeholder="Learn the rules like a pro, so you can break them like an artist. -Picasso" rows="40" cols="100"></textarea>
+<!--                <input type="submit" value="Submit Poem" class="btn btn-success">-->
+            </form>
+        </td>
+        <td>
+
+    <!--this conditional keeps the following stanza guide from showing up before the form is submitted-->
+    <div th:unless="${END1 == null}">
+            <label>stanza one</label>
+                <div th:each="endword: ${stanzaOne}">
+                    <p th:text="${endword}"></p>
+                </div>
+            <label>stanza two</label>
+                <div th:each="endword: ${stanzaTwo}">
+                    <p th:text="${endword}"></p>
+                </div>
+            <label>stanza three</label>
+                <div th:each="endword: ${stanzaThree}">
+                    <p th:text="${endword}"></p>
+                </div>
+
+            <label>stanza four</label>
+                <div th:each="endword: ${stanzaFour}">
+                    <p th:text="${endword}"></p>
+                </div>
+
+            <label>stanza five</label>
+                <div th:each="endword: ${stanzaFive}">
+                    <p th:text="${endword}"></p>
+                </div>
+
+            <label>stanza six</label>
+                <div th:each="endword: ${stanzaSix}">
+                    <p th:text="${endword}"></p>
+                </div>
+
+        <div>
+            <label>envoi</label>
+                            <p th:text="'Use ('+ ${END1} +') and ('+ ${END6} +') in line one'"></p>
+                            <p th:text="'Use ('+ ${END2} +') and ('+ ${END5} +') in second line'"></p>
+                            <p th:text="'Use ('+ ${END3} +') and ('+ ${END4} +') in final line'"></p>
+            <a href="/envoi" target="_blank">What's an envoi?</a>
+        </div>
+
+        </div>
+
+        </td>
+    </tr>
+</table>
+</body>
+<div align="center">
+    <body>
+    <h1>Tips and Tricks</h1>
+
+    <p>Try using words that are both <a href="https://www.businessenglishresources.com/learn-english-for-business/teachers-section/mini-lessons/pronunciation-lessons-pronunciation-changes-in-words-that-are-both-nouns-and-verbs/" target="_blank">verbs and nouns</a> as your end words to make them more versatile.</p>
+    <p>Find a rhyme <a href="https://www.rhymer.com/" target="_blank">here</a>. Rhymes can add cadence to your stanzas, although I wouldn't recommend making all of your end words rhyming words. Unless you really want to. I won't tell you what to do.</p>
+    </body>
+</div>
+</html>
