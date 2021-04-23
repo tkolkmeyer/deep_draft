@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+    <meta charset="UTF-8"/>
+
+
+    <head th:replace="fragments :: head"></head>
+
+    <body>
+    <div th:replace="fragments :: page-header"></div>
+    </body>
+
+<div align="center">
+    <body>
+        <h1>Let me see an example</h1>
+
+            <h3>Behold! A sestina by Dante himself.</h3>
+            <img th:src="@{/images/dante.png}">
+            <h3>Ok, so if Dante had access to my app he'd establish his end words like so:</h3>
+            <img th:src="@{/images/end_words_dante.png}">
+            <h3>Then use them as a guide as the poem is crafted in the text box.</h3>
+            <img th:src="@{/images/example_endwords.png}">
+            <img th:src="@{/images/example_endwords_stanzatwo.png}">
+            <h3>I realize this app assumes that you're 100% sure about your end words from the beginning. Feel free to put new end words into the form submission, but know that the text box will be cleared. <b>The sestina text box doesn't save your work as you go! Use "copy" or save it to a notepad to be safe.</b></h3>
+    </body>
+</div>
+</html>
