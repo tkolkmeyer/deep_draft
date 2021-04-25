@@ -8,6 +8,12 @@ group = 'com.deepdraft'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '15'
 
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(15)
+	}
+}
+
 configurations {
 	developmentOnly
 	runtimeClasspath {
