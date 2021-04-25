@@ -30,3 +30,14 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+compileJava {
+	sourceCompatibility = 15
+	targetCompatibility = 15
+}
+
+compileTestJava {
+	sourceCompatibility = 15
+	targetCompatibility = 15
+	options.compilerArgs += '-parameters'
+}
