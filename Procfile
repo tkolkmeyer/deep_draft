@@ -1,1 +1,1 @@
-web: java gradlew
+web: gradle deep_draft/Tasks/application/bootRun
