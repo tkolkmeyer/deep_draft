@@ -1,1 +1,1 @@
-web: java java/com/deepdraft/deep_draft/DeepDraftApplication.java
+web: java $JAVA_OPTS -cp gradlew com.deepdraft.deep_draft
