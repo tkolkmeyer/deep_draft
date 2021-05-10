@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp gradlew build/classes/java/main/com/deepdraft/deep_draft/DeepDraftApplication.class
+web: java $JAVA_OPTS -cp gradlew com.deepdraft.deep_draft.models
