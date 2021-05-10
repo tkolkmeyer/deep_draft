@@ -1,1 +1,1 @@
-web: java deep_draft/Tasks/application/bootRun
+web: java java/com/deepdraft/deep_draft/DeepDraftApplication.java
