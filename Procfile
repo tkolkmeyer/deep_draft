@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp gradlew com.deepdraft.deep_draft.models
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar gradle/wrapper/gradle-wrapper.jar
