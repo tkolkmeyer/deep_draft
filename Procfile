@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar gradle/wrapper/gradle-wrapper.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/deep_draft-0.0.1-SNAPSHOT.jar
