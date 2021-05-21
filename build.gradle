@@ -6,11 +6,11 @@ plugins {
 
 group = 'com.deepdraft'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '15'
+sourceCompatibility = '8'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(15)
+		languageVersion = JavaLanguageVersion.of(8)
 	}
 }
 
@@ -38,12 +38,12 @@ test {
 }
 
 compileJava {
-	sourceCompatibility = 15
-	targetCompatibility = 15
+	sourceCompatibility = 8
+	targetCompatibility = 8
 }
 
 compileTestJava {
-	sourceCompatibility = 15
-	targetCompatibility = 15
+	sourceCompatibility = 8
+	targetCompatibility = 8
 	options.compilerArgs += '-parameters'
 }
